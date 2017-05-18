@@ -62,7 +62,7 @@
       </link>
     </model>
     <include>
-      <uri>model://uarm</uri>
+      <uri>model://uarm-v1</uri>
       <pose>0 0 0 0 0 0</pose>
     </include>
     

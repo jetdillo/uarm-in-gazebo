@@ -12,6 +12,16 @@ int main(int argc, char * argv[])
     double angle = atof(argv[2]);
     publisher.send_message(joint_name, angle);
   }
+
+  if (argc == 4) 
+  {
+    UarmPublisher publisher;
+    char* joint_name = argv[1];
+    double angle = atof(argv[2]);
+    double vel   = atof(argv[3]);
+    publisher.send_message(joint_name, angle,vel);
+  }
+    
   // if the command is in the format uarm_pub pose
   else if (argc == 2)
   {

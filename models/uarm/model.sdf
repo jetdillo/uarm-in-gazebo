@@ -624,6 +624,10 @@
       <child>big_under_arm_l</child>
       <parent>base_l</parent>
       <axis>
+        <limit>
+           <lower>-0.785</lower>
+           <upper>0.5181</upper>
+         </limit>
         <xyz>0 1 0</xyz>
       </axis>
     </joint>
@@ -632,6 +636,9 @@
       <child>big_under_arm_r</child>
       <parent>big_under_arm_l</parent>
       <axis>
+           <lower>-0.785</lower>
+           <upper>0.5181</upper>
+        
         <xyz>0 1 0</xyz>
         <limit>
           <upper>0</upper>

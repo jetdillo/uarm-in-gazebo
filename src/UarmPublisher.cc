@@ -21,6 +21,21 @@ UarmPublisher::~UarmPublisher()
 }
 
 
+void UarmPublisher::send_message(const char *joint_name, double angle, double vel)
+{
+  uarm_msgs::msgs::NewPosition msg;
+  msg.add_positions();
+  msg.mutable_positions(0)->set_joint_name(joint_name);
+  msg.mutable_positions(0)->set_angle(angle);
+  msg.mutable_positions(0)->set_vel(vel);
+  std::cout << "Trying to send message." << std::endl;
+  std::cout << joint_name;
+  std::cout << angle;
+  std::cout << vel;
+  pub->Publish(msg);
+  std::cout << "Send message." << std::endl;
+}
+
 void UarmPublisher::send_message(const char *joint_name, double angle)
 {
   uarm_msgs::msgs::NewPosition msg;
@@ -28,6 +43,8 @@ void UarmPublisher::send_message(const char *joint_name, double angle)
   msg.mutable_positions(0)->set_joint_name(joint_name);
   msg.mutable_positions(0)->set_angle(angle);
   std::cout << "Trying to send message." << std::endl;
+  std::cout << joint_name;
+  std::cout << angle;
   pub->Publish(msg);
   std::cout << "Send message." << std::endl;
 }

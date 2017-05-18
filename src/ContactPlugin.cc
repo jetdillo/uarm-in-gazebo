@@ -57,18 +57,18 @@ void ContactPlugin::OnUpdate()
     // make sure that one collision is from the suction cup
     // and the other collision is NOT from the suction cup
     if (std::strcmp(contacts.contact(i).collision1().c_str(),
-                    "uarm::suction_cup::uarm_suction_cup_collison") == 0
+                    "uarm::suction_cup::uarm_suction_cup_collision") == 0
         && std::strcmp(contacts.contact(i).collision2().c_str(),
-                       "uarm::suction_cup::uarm_suction_cup_collison") != 0)
+                       "uarm::suction_cup::uarm_suction_cup_collision") != 0)
       // send the collision that is NOT from the suction cup
       this->send_message(contacts.contact(i).collision2().c_str());
 
     // make sure that one collision is from the suction cup
     // and the other collision is NOT from the suction cup
     if (std::strcmp(contacts.contact(i).collision2().c_str(),
-                    "uarm::suction_cup::uarm_suction_cup_collison") == 0
+                    "uarm::suction_cup::uarm_suction_cup_collision") == 0
         && std::strcmp(contacts.contact(i).collision1().c_str(),
-                       "uarm::suction_cup::uarm_suction_cup_collison") != 0)
+                       "uarm::suction_cup::uarm_suction_cup_collision") != 0)
       // send the collision that is NOT from the suction cup
       this->send_message(contacts.contact(i).collision1().c_str());
   }
