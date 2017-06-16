@@ -2,6 +2,15 @@
 @bennypi has indicated that he's no longer working on this project and encouraged me to take it over. 
 I've made some fixes so that the code under src/ now works with C++11 and Gazebo 7.x . 
 I'll push up further changes and add more features/functionality as time permits. 
+
+Latest changes:
+-   Bug fixes to code under src/ so it works with Gazebo 7.x
+-   Re-exported/renamed .stl and .dae files to fix some geometry errors with the meshes and make the model overall easier to work with. 
+-   Added RasPiCam model and Camera plugin to provide a camera onto the end of the arm
+-   Added limits/constraints/other physics attributes to make the arm respond more realistically. 
+-   Moved from shell scripts to proper ROS launch files for launching/startup. 
+-   Organized repo into proper ROS REP-compliant directory structure. 
+-   Adding more sensors
 ___________________
 
 uarm-in-gazebo
