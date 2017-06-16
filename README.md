@@ -1,3 +1,9 @@
+Taking this over. 
+@bennypi has indicated that he's no longer working on this project and encouraged me to take it over. 
+I've made some fixes so that the code under src/ now works with C++11 and Gazebo 7.x . 
+I'll push up further changes and add more features/functionality as time permits. 
+==============
+
 uarm-in-gazebo
 ==============
 We are planning to create a working model of the uarm in gazebo. The uarm is a open-source robotic arm which was created by uFactory and founded through Kickstarter https://www.kickstarter.com/projects/ufactory/uarm-put-a-miniature-industrial-robot-arm-on-your.
